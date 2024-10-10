@@ -47,10 +47,10 @@ body {
 
 .navigation-button-style {
     padding: 8px 16px;
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 16px;
     background-color: var(--button-color);
-    color: var(--text-color);
+    color: var(--white);
 
 }
 
@@ -59,12 +59,61 @@ body {
     font-weight: 400;
     font-size: 14px;
     background-color: var(--button-color);
-    color: var(--text-color);
+    color: var(--white);
+}
+
+.elements-in-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 :root {
     --button-color: #1E3DAF;
-    --text-color: #FFFFFF;
+    --white: #FFFFFF;
+    --black: #2A2F37;
 }
 
 /*-----------------------------header */
+
+.header {
+    border-bottom: 1px solid;
+    background-color: var(--white);
+}
+
+.header-wrapper {
+    max-width: 1170px;
+    height: 72px;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.header-line-size {
+    width: 80%;
+}
+
+.search {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    margin: 2px 4px 2px 2px;
+    opacity: 0.6;
+}
+
+.search::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--black);
+    transform: rotate(45deg);
+    bottom: 0px;
+    clip-path: inset(0 0 0 45%);
+}
+
+.login-text {
+
+}
