@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;                 /* padding и border включены в width и height. Не надо думать о размере контейнера */
+}
+
+*,
+*::before,                                  /*Изучить*/
+*::after {
+    box-sizing: inherit;                    /* inherit - наследовать */
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+body {
+    min-width: 320px;
+    word-break: normal;
+    font-family: "Roboto", sans-serif;
+}
+
+/* global */
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.button-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navigation-button-style {
+    padding: 8px 16px;
+    font-weight: 400px;
+    font-size: 16px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+
+}
+
+.button-in-cards {
+    padding: 4px 12px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+}
+
+:root {
+    --button-color: #1E3DAF;
+    --text-color: #FFFFFF;
+}
+
+/*-----------------------------header */
