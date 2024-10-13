@@ -90,6 +90,8 @@ body {
 :root {
     --button-color: #1e3daf;
     --white: #ffffff;
+    --white12: rgb(255 255 255 / 0.12);
+    --white40: rgb(255 255 255 / 0.4);
     --black: #2A2F37;
     --black2: rgb(42 47 55 / 0.02);
     --black4: rgb(42 47 55 / 0.04);
@@ -140,24 +142,20 @@ body {
     clip-path: inset(0 0 0 55%);
 }
 
-.login-text {
-    
-}
-
-.login-logo {
+.login-button {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--black);
     position: relative;
-    width: 8px;
-    height: 8px;
-    border: 2px solid var(--black40);
-    border-radius: 50%;
-    margin: 3px 60px 13px 8px;
+    padding: 5px 5px 5px 25px;
+    margin-right: 50px;
 }
 
-.login-logo::before {
+.login-button::after {
     content: '';
     position: absolute;
-    top: 8px;
-    right: -6px;
+    top: 14px;
+    right: 48px;
     width: 16px;
     height: 6px;
     border-top: 2px solid var(--black40);
@@ -167,14 +165,17 @@ body {
     border-top-right-radius: 4px;
 }
 
-.login-logo::after {
-    content: 'Войти';
+.login-button::before {
+    content: '';
     position: absolute;
-    left: 20px;
-    top: -2px;
-    font-weight: 400;
-    font-size: 14px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--black40);
+    border-radius: 50%;
+    right: 52px;
+    top: 4px;
 }
+
 
 /*-----------------------------first section */
 
@@ -198,7 +199,7 @@ body {
 }
 
 .first-section-bg {
-    background-image: url(/img/main/first-section/first-section-bg.svg);
+    background-image: url(../img/main/first-section/first-section-bg.svg);
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -208,7 +209,6 @@ body {
     padding: 0px 16px;
     background-color: var(--black12);
     border-color: var(--black8);
-    position: relative;
 }
 
 .search-input::placeholder {
@@ -217,15 +217,48 @@ body {
     color: var(--black40);
 }
 
+.input-search-logo {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--black40);
+    border-radius: 50%;
+    margin: 2px 4px 2px 2px;
+    top: 14px;
+    right: 15px;
+}
+
+.input-search-logo::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--black40);
+    transform: rotate(45deg);
+    bottom: 0px;
+    clip-path: inset(0 0 0 55%);
+}
+
+.for-input-search-logo {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
 /*-----------------------------second section */
 
 .second-section-bg-color {
     background-color: var(--black12);
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .second-section-navigation-wrapper {
     width: 645px;
     padding: 40px 0 80px 0;
+    grid-column: 1 / span 3;
 }
 
 .button-in-list {
@@ -255,6 +288,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 40px;
     column-gap: 40px;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 160px;
 }
 
 .cards {
@@ -264,6 +300,7 @@ body {
     justify-content: space-between;
     background-color: var(--white);
     position: relative;
+    cursor: pointer;
 }
 
 .cards-img {
@@ -294,4 +331,119 @@ body {
     margin: 0 24px 0 24px;
 }
 
+.view-text {
+    position: relative;
+}
 
+.view-text::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 2px solid var(--black40);
+    border-radius: 50%;
+    top: 5px;
+    right: 35px;
+}
+
+.view-text::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--black40);
+    right: 30px;
+    border-radius: 70% 20%;
+    transform: rotate(45deg);
+}
+
+.download-button {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 16px;
+    grid-column: 2;
+    padding: 12px 50px;
+    border: 1px solid var(--black);
+    width: 240px;
+    justify-self: center;
+    font-weight: 700;
+    position: relative;
+}
+
+.download-button::before {
+    content: ' \21C4';
+    margin-right: 7px;
+}
+
+/*.download-button::before {
+    content: '';
+    width: 12px;
+    height: 4px;
+    border-top: 1px solid var(--black);
+    border-left: 1px solid var(--black);
+    border-top-left-radius: 3px;
+    position: absolute;
+    left: 35px;
+    top: 17px;
+}
+
+.download-button::after {
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-top: 1px solid var(--black);
+    border-left: 1px solid var(--black);
+    position: absolute;
+    transform: rotate(135deg);
+    left: 44px;
+    top: 16px;
+}*/
+
+/*-----------------------------footer */
+
+.footer-bg-color {
+    background-color: var(--black);
+    max-width: 1920px;
+    margin: 0 auto;
+    height: 305px;
+}
+
+.after-logo {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--white40);
+    margin-left: 40px;
+    padding-left: 40px;
+    border-left: 1px solid var(--white40);
+}
+
+.fitst-line-padding {
+    padding-top: 50px;
+    padding-bottom: 65px;
+}
+
+.link-padding {
+    padding: 0 20px 0 20px;
+}
+
+.center-elements-text{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--white12);
+    margin-bottom: 25px;
+}
+
+.address-gap{
+    gap: 215px;
+}
+
+.bottom-elements-text{
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--white40);
+}
+
+.privacy-policy {
+    text-decoration: underline;
+}
