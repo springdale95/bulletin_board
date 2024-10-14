@@ -80,12 +80,6 @@ body {
     margin: 0 auto;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    row-gap: 40px;
-    column-gap: 40px;
-}
 
 :root {
     --button-color: #1e3daf;
@@ -179,6 +173,12 @@ body {
 
 /*-----------------------------first section */
 
+.grid-first-section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 35px;
+}
+
 .first-section-elements-wrapper {
     margin: 100px 0 150px;
     grid-column: 1 / span 5;
@@ -209,6 +209,7 @@ body {
     padding: 0px 16px;
     background-color: var(--black12);
     border-color: var(--black8);
+    outline: none;
 }
 
 .search-input::placeholder {
@@ -294,13 +295,13 @@ body {
 }
 
 .cards {
-    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--white);
     position: relative;
     cursor: pointer;
+    gap: 18px;
 }
 
 .cards-img {
@@ -361,12 +362,11 @@ body {
     font-family: "Roboto Slab", sans-serif;
     font-size: 16px;
     grid-column: 2;
-    padding: 12px 50px;
+    padding: 12px 45px;
     border: 1px solid var(--black);
     width: 240px;
     justify-self: center;
     font-weight: 700;
-    position: relative;
 }
 
 .download-button::before {
